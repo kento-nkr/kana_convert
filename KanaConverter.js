@@ -1,5 +1,5 @@
 const CONVERSIONMAP = require("./kana_map.json");
-class CharacterConverter {
+class KanaConverter {
   constructor() {
     this.conversionMap = CONVERSIONMAP;
   }
