@@ -87,5 +87,15 @@
   { "half": "ｰ", "full": "ー" },
   { "half": "｢", "full": "「" },
   { "half": "｣", "full": "」" },
-  { "half": "･", "full": "・" }
+  { "half": "･", "full": "・" },
+  { "half": "0", "full": "０" },
+  { "half": "1", "full": "１" },
+  { "half": "2", "full": "２" },
+  { "half": "3", "full": "３" },
+  { "half": "4", "full": "４" },
+  { "half": "5", "full": "５" },
+  { "half": "6", "full": "６" },
+  { "half": "7", "full": "７" },
+  { "half": "8", "full": "８" },
+  { "half": "9", "full": "９" }
 ]
