@@ -1,5 +1,7 @@
-const CONVERSIONMAP = require("./kana_map.json");
-class KanaConverter {
+const MAP_PATH = "../config/kana_map.json";
+const CONVERSIONMAP = require(MAP_PATH);
+
+module.exports = class KanaConverter {
   constructor() {
     this.conversionMap = CONVERSIONMAP;
   }
@@ -13,8 +15,17 @@ class KanaConverter {
   }
 
   convert(str, fromType, toType) {
-    const convertedString = str
-      .split("")
+    const str_array = Array.from(str);
+    let result_arr = [];
+    str_array.forEach((elem) => {
+      if (elem == "ﾞ") {
+        let tmp = result_arr.pop();
+        result_arr.push(tmp + elem);
+      } else {
+        result_arr.push(elem);
+      }
+    });
+    const convertedString = result_arr
       .map((char) => {
         const conversion = this.conversionMap.find(
           (entry) => entry[fromType] === char
@@ -25,20 +36,4 @@ class KanaConverter {
 
     return convertedString;
   }
-}
-
-function demo() {
-  const converter = new CharacterConverter();
-
-  const hankakuString = "ｶﾞﾁアイウエオ";
-  const zenkakuString = "アイウエオ";
-
-  const convertedHankaku = converter.fullToHalf(zenkakuString);
-  const convertedZenkaku = converter.halfToFull(hankakuString);
-
-  console.log("Original Hankaku:", hankakuString);
-  console.log("Converted to Zenkaku:", convertedZenkaku);
-
-  console.log("Original Zenkaku:", zenkakuString);
-  console.log("Converted to Hankaku:", convertedHankaku);
-}
+};
