@@ -1,4 +1,4 @@
-module.exports = class KanaConverter
+class KanaConverter
 {
   constructor()
   {
