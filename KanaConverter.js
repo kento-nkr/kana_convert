@@ -6,12 +6,12 @@ class KanaConverter
     this.conversionMap = CONVERSIONMAP;
   }
 
-  halfToFull(str)
+  static halfToFull(str)
   {
     return this.convert(str, "half", "full");
   }
 
-  fullToHalf(str)
+  static fullToHalf(str)
   {
     return this.convert(str, "full", "half");
   }
