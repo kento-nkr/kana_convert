@@ -46,6 +46,7 @@ class KanaConverter
 };
 
 const CONVERSIONMAP = [
+  { "half": " ", "full": "　" },
   { "half": "ｶﾞ", "full": "ガ" },
   { "half": "ｷﾞ", "full": "ギ" },
   { "half": "ｸﾞ", "full": "グ" },
