@@ -16,7 +16,7 @@ class KanaConverter
     return this.convert(str, "full", "half");
   }
 
-  convert(str, fromType, toType)
+  static convert(str, fromType, toType)
   {
     const str_array = Array.from(str);
     let result_arr = [];
