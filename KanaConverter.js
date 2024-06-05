@@ -45,7 +45,7 @@ class KanaConverter
   }
 };
 
-const CONVERSIONMAP = [
+static CONVERSIONMAP = [
   { "half": " ", "full": "　" },
   { "half": "ｶﾞ", "full": "ガ" },
   { "half": "ｷﾞ", "full": "ギ" },
