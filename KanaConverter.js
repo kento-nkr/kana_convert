@@ -1,40 +1,27 @@
 // module.exports =
-class KanaConverter
-{
-  constructor()
-  {
-    this.conversionMap = CONVERSIONMAP;
-  }
-
-  static halfToFull(str)
-  {
+class KanaConverter {
+  static halfToFull(str) {
     return this.convert(str, "half", "full");
   }
 
-  static fullToHalf(str)
-  {
+  static fullToHalf(str) {
     return this.convert(str, "full", "half");
   }
 
-  static convert(str, fromType, toType)
-  {
+  static convert(str, fromType, toType) {
     const str_array = Array.from(str);
     let result_arr = [];
-    str_array.forEach((elem) =>
-    {
-      if (elem == "ﾞ")
-      {
+    str_array.forEach((elem) => {
+      if (elem == "ﾞ") {
         let tmp = result_arr.pop();
         result_arr.push(tmp + elem);
-      } else
-      {
+      } else {
         result_arr.push(elem);
       }
     });
     const convertedString = result_arr
-      .map((char) =>
-      {
-        const conversion = this.conversionMap.find(
+      .map((char) => {
+        const conversion = this.CONVERSIONMAP.find(
           (entry) => entry[fromType] === char
         );
         return conversion ? conversion[toType] : char;
@@ -43,6 +30,7 @@ class KanaConverter
 
     return convertedString;
   }
+
   static CONVERSIONMAP = [
     { "half": " ", "full": "　" },
     { "half": "ｶﾞ", "full": "ガ" },
@@ -146,3 +134,5 @@ class KanaConverter
     { "half": "9", "full": "９" }
   ];
 };
+
+console.log(KanaConverter.halfToFull("ｱｲｳｴｵ") === "アイウエオ");
