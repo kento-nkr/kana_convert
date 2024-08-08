@@ -59,8 +59,8 @@ class KanaConverter {
     { "half": "ﾍﾟ", "full": "ベ" },
     { "half": "ﾎﾟ", "full": "ボ" },
     { "half": "ｳﾞ", "full": "ヴ" },
-    { "half": "ﾜﾞ", "full": "ワ" },
-    { "half": "ｦﾞ", "full": "ヲ" },
+    // { "half": "ﾜﾞ", "full": "ワ" },
+    // { "half": "ｦﾞ", "full": "ヲ" },
     { "half": "ｱ", "full": "ア" },
     { "half": "ｲ", "full": "イ" },
     { "half": "ｳ", "full": "ウ" },
@@ -135,4 +135,4 @@ class KanaConverter {
   ];
 };
 
-console.log(KanaConverter.halfToFull("ｱｲｳｴｵ") === "アイウエオ");
+// console.log(KanaConverter.halfToFull("ｱｲｳｴｵ") === "アイウエオ");
