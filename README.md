@@ -5,7 +5,7 @@
 1. include
   This script is available through CDN service. Please include the URL below in your production.
   ```sh
-  https://cdn.jsdelivr.net/gh/kento-nkr/kana_converter@20240808/kana_converter.js
+  [https://cdn.jsdelivr.net/gh/kento-nkr/kana_converter@20240808/kana_converter.js](https://cdn.jsdelivr.net/gh/kento-nkr/kana_converter@20240808/KanaConverter.js)
   ```
 
 2. use
